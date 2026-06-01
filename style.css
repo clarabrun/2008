@@ -1,9 +1,12 @@
-/* IMPORTAÇÃO DA FONTE */
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,800');
 
-/* BODY */
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
     height:100vh;
     background:#333;
     display:flex;
@@ -13,23 +16,25 @@ body{
 }
 
 /* CARD */
+
 .card{
     position:relative;
-    cursor:pointer;
     width:300px;
+    cursor:pointer;
 }
 
 /* FACE 1 */
+
 .face1{
     position:relative;
     width:300px;
     height:200px;
     background:#333;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
-    transition:.5s;
+    flex-direction:column;
+    transition:0.5s;
     transform:translateY(100px);
     z-index:1;
 }
@@ -40,20 +45,20 @@ body{
 }
 
 /* FACE 2 */
+
 .face2{
     position:relative;
     width:300px;
     height:200px;
     background:#fff;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
-    box-sizing:border-box;
+    flex-direction:column;
     padding:20px;
-    transition:.5s;
+    transition:0.5s;
     transform:translateY(-100px);
-    box-shadow:0 20px 50px rgba(0,0,0,.8);
+    box-shadow:0 20px 50px rgba(0,0,0,0.8);
 }
 
 .card:hover .face2{
@@ -61,9 +66,11 @@ body{
 }
 
 /* IMAGEM E TÍTULO */
+
 .imgbox{
-    opacity:.2;
-    transition:.5s;
+    text-align:center;
+    opacity:0.2;
+    transition:0.5s;
 }
 
 .card:hover .imgbox{
@@ -72,34 +79,38 @@ body{
 
 .face1 img{
     width:100px;
+    display:block;
+    margin:0 auto;
 }
 
 h3{
-    margin:10px 0 0;
-    padding:0;
-    color:#fff;
-    text-align:center;
+    margin-top:10px;
+    color:white;
     font-size:25px;
+    text-align:center;
 }
 
 /* TEXTO */
-p{
-    margin:0;
-    padding:0;
+
+.content p{
+    text-align:center;
+    color:#333;
 }
 
 /* BOTÃO */
-a{
-    margin:15px 0 0;
+
+.content a{
+    margin-top:15px;
     display:inline-block;
     text-decoration:none;
     font-weight:900;
     color:#777;
-    padding:5px;
+    padding:5px 10px;
     border:1px solid #777;
+    transition:0.3s;
 }
 
-a:hover{
+.content a:hover{
     background:#777;
-    color:#fff;
+    color:white;
 }
